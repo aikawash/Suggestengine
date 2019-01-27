@@ -11,5 +11,9 @@ INPUT FILE: N/A
 OUTPUT FILE: N/A
 BIBLIOGRAPHY: N/A
 RESOURCES: Beautiful Soup library (https://www.crummy.com/software/BeautifulSoup/),  EasyGUI API (http://easygui.sourceforge.net/)
-COMMENTS: N/A
+COMMENTS: 
+
+$ pip install -r requirements.txt
+
+Install python into the path & make sure pip works!
  
