@@ -20,7 +20,7 @@ OUTPUT FILE: N/A
 BIBLIOGRAPHY: N/A
 
 RESOURCES: Beautiful Soup library (https://www.crummy.com/software/BeautifulSoup/),  EasyGUI API (http://easygui.sourceforge.net/),
-Clemson University Events Calender (https://calendar.clemson.edu/), Requests API (http://docs.python-requests.org/en/master/)
+Clemson University Events Calendar (https://calendar.clemson.edu/), Requests API (http://docs.python-requests.org/en/master/)
 
 COMMENTS: 
 To install the required files, run the following command prompt
