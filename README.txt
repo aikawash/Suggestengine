@@ -1,4 +1,4 @@
-TITLE: Suggestion Engine
+TITLE: Sujestr (Suggestion Engine)
 
 AUTHOR/PROGRAMMER: Aika Washington, Dhruv Mukherjee, Cory Fuller, Beau Brierre
 
