@@ -50,12 +50,12 @@ if __name__ == '__main__':
 
 sys.path.append('..')
 
-reply = eg.msgbox("Hi. What kind of events are you looking for?")
+reply = eg.buttonbox("\t\tWelcome to the Sujestr, brought to you by Nudl", choices = ['I want ideas!'])
 if reply is None:
 	exit()
 else:
 	choices = ["Clemson Event", "Spontaneous"]
-	reply = eg.buttonbox("Choose one.", choices  = ['One Time Events', 'Anytime Events'])
+	reply = eg.buttonbox("Make a pick:", choices  = ['One Time Events', 'Anytime Events'])
 
 	if reply is None or reply == 'One Time Events':
 		choices = ["This Month", "This Week", "Right Now", "Cancel"]
@@ -63,8 +63,9 @@ else:
 		if reply is None or reply == 'Cancel':
 			exit()
 		elif reply == 'This Month':
-			x = random.randint(0, len(event_list)-1)
-			eg.msgbox("Sure thing. Here's something I've found: "+str(event_list[x]) +" at "+str(place_list[x]) + " " +str(when_list[x]))
+			while reply is not "Cancel":
+				x = random.randint(0, len(event_list)-1)
+				reply = eg.buttonbox(("Sure thing. Here's something I've found: "+str(event_list[x]) +" at "+str(place_list[x]) + " " +str(when_list[x])), choices = ["Another Idea?", "Cancel"])
 
 		elif reply == 'This Week':
 			today = now.day
@@ -83,9 +84,10 @@ else:
 						tEvTime.append(when_list[x])
 
 			if len(todayEvents) != 0:
-				x = random.randint(0, len(todayEvents)-1)
-				date = todayEvents[x]
-			eg.msgbox("OK, I've got something you might be interested in, " +str(date) + " at " + str(tEvLoc[x]) + ", " + str(tEvTime[x]) )
+				while reply is not "Cancel":
+					x = random.randint(0, len(todayEvents)-1)
+					date = todayEvents[x]
+					reply = eg.buttonbox(("OK, I've got something you might be interested in, " +str(date) + " at " + str(tEvLoc[x]) + ", " + str(tEvTime[x])), choices = ["Another Idea?", "Cancel"])
 
 		elif reply == 'Right Now':
 			today = now.day
@@ -102,9 +104,10 @@ else:
 					tEvTime.append(when_list[x])
 
 			if len(todayEvents) != 0:
-				x = random.randint(0, len(todayEvents)-1)
-				date = todayEvents[x]
-				eg.msgbox("Alright. Here's what I've found for you:"+ str(date) + " at " + str(tEvLoc[x]) + ", " + str(tEvTime[x]))
+				while reply is not "Cancel":
+					x = random.randint(0, len(todayEvents)-1)
+					date = todayEvents[x]
+					reply = eg.buttonbox(("Alright. Here's what I've found for you:"+ str(date) + " at " + str(tEvLoc[x]) + ", " + str(tEvTime[x])), choices = ["Another Idea?", "Cancel"])
 			else:
 				eg.msgbox("Sorry, I found no events for today, perhaps you want to try later on")
 
