@@ -1,6 +1,6 @@
 TITLE: Sujestr (Suggestion Engine)
 
-AUTHOR/PROGRAMMER: Aika Washington, Dhruv Mukherjee, Cory Fuller, Beau Brierre
+AUTHOR/PROGRAMMER: Team Nüdl: Aika Washington, Dhruv Mukherjee, Cory Fuller, Beau Brierre 
 
 DATE SUBMITTED: 27 January 2019
 
